@@ -1,0 +1,62 @@
+page:
+  a6: [105, 148]
+  hagaki: [100, 148]
+
+fontpath:
+  - '.'
+  - 'c:\Windows\Fonts'
+  - '%LOCALAPPDATA%\Microsoft\Windows\Fonts'
+
+font:
+  yu: yumin.ttf
+  ac: ackaisyo.ttf
+  biz: BIZ-UDMinchoM.ttc
+  ud: UDDigiKyokashoN-R.ttc
+mono: [biz, ud]
+
+choices:
+  do: [print, open]
+
+default:
+  out: output.pdf
+  page: hagaki
+  margin: 5
+  height: 1
+  font: ud
+  mono: ud
+
+elements:
+  郵便番号: {pos: [40,6], rect: [48,6], size: 20, mono: true}
+  住所1: {pos: [84,20], rect: [7,5], size: 12}
+  住所2: {pos: [74,40], rect: [7,5], size: 12}
+  会社名: {pos: [64,20], rect: [7,5], size: 12}
+  姓1: {pos: [48,20], rect: [12,10], size: 24}
+  名1: {pos: [48,60], rect: [12,10], size: 24}
+  敬称1: {pos: [48,100], rect: [12,10], size: 24}
+  姓2: {pos: [32,20], rect: [12,10], size: 24}
+  名2: {pos: [32,60], rect: [12,10], size: 24}
+  敬称2: {pos: [32,100], rect: [12,10], size: 24}
+
+translate:
+  '-': ｜
+  '0': 〇
+  '1': 一
+  '2': 二
+  '3': 三
+  '4': 四
+  '5': 五
+  '6': 六
+  '7': 七
+  '8': 八
+  '9': 九
+  ー: ｜
+  ０: 〇
+  １: 一
+  ２: 二
+  ３: 三
+  ４: 四
+  ５: 五
+  ６: 六
+  ７: 七
+  ８: 八
+  ９: 九
