@@ -32,16 +32,16 @@ default:
   mono: ud
 
 elements:
-  郵便番号: {pos: [40,6], rect: [48,6], size: 20, mono: true}
-  住所1: {pos: [84,20], rect: [7,5], size: 12}
-  住所2: {pos: [74,40], rect: [7,5], size: 12}
-  会社名: {pos: [64,20], rect: [7,5], size: 12}
-  姓1: {pos: [48,20], rect: [12,10], size: 24}
-  名1: {pos: [48,60], rect: [12,10], size: 24}
-  敬称1: {pos: [48,100], rect: [12,10], size: 24}
-  姓2: {pos: [32,20], rect: [12,10], size: 24}
-  名2: {pos: [32,60], rect: [12,10], size: 24}
-  敬称2: {pos: [32,100], rect: [12,10], size: 24}
+  郵便番号: {pos: [44,14], rect: [48,6], size: 20, mono: true}
+  住所1: {pos: [84,30], rect: [7,5], size: 12}
+  住所2: {pos: [78,50], rect: [7,5], size: 12}
+  会社名: {pos: [68,30], rect: [7,5], size: 12}
+  姓1: {pos: [52,30], rect: [12,10], size: 24}
+  名1: {pos: [52,70], rect: [12,10], size: 24}
+  敬称1: {pos: [52,110], rect: [12,10], size: 24}
+  姓2: {pos: [36,30], rect: [12,10], size: 24}
+  名2: {pos: [36,70], rect: [12,10], size: 24}
+  敬称2: {pos: [36,110], rect: [12,10], size: 24}
 
 translate:
   '-': ｜
