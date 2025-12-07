@@ -12,7 +12,8 @@ addressee printer for Japanese postcard
         - BIZ UD明朝
         - UDデジタル教科書体
         - 游明朝
-	- HG正楷書体PRO
-	- HG教科書体
+    - Office同梱のフォント
+        - HG正楷書体PRO
+        - HG教科書体
     - フリー楷書体フォント
         - 英推楷書 https://www.ac-font.com/jp/detail_jb_007.php
