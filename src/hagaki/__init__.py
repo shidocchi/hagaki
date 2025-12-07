@@ -5,7 +5,7 @@ from csv import DictReader
 from pathlib import Path
 from .pdfbase import FontFace, PdfBase, FlexTemplate
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 class Hagaki:
   """addressee printer for japanese postcard"""
