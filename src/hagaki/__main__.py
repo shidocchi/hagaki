@@ -1,4 +1,3 @@
-import sys
 from . import Hagaki
 
 if __name__ == '__main__':

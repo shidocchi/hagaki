@@ -8,10 +8,13 @@ fontpath:
   - '%LOCALAPPDATA%\Microsoft\Windows\Fonts'
 
 font:
-  yu: yumin.ttf
-  ac: ackaisyo.ttf
   biz: BIZ-UDMinchoM.ttc
   ud: UDDigiKyokashoN-R.ttc
+  yu: yumin.ttf
+  yudb: yumindb.ttf
+  hgsk: HGRSKP.TTF
+  hgkk: HGRKK.TTC
+  ac: ackaisyo.ttf
 mono: [biz, ud]
 
 choices:
