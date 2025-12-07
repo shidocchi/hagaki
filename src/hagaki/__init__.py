@@ -1,6 +1,7 @@
 import os
 import argparse
 import yaml
+from csv import DictReader
 from pathlib import Path
 from .pdfbase import FontFace, PdfBase, FlexTemplate
 
@@ -43,10 +44,13 @@ class Hagaki:
       v.insert(0, '')
     return "\n".join(v)
 
+  def srcpath(self, fname):
+    return Path(__file__).resolve().parent / fname
+
   def load_conf(self) -> dict:
     """Load configulation file"""
-    fpath = Path(__file__).resolve().parent / 'config.yaml'
-    with open(fpath, 'r', encoding='utf8') as f:
+    srcpath = self.srcpath('config.yaml')
+    with open(srcpath, 'r', encoding='utf8') as f:
       conf = yaml.safe_load(f)
     return conf
 
@@ -76,6 +80,7 @@ class Hagaki:
       prog='hagaki',
       description='addressee printer for Japanese postcard')
     parser.add_argument('--out', help='output filename')
+    parser.add_argument('--csv', help='input csvfile')
     parser.add_argument('--page', help='page size',
       choices=self.conf['page'].keys())
     parser.add_argument('--margin', help='margin mm',
@@ -120,7 +125,7 @@ class Hagaki:
       elems.append(e)
     return FlexTemplate(self.pdf, elements=elems)
 
-  def init_table(self):
+  def init_table(self) -> dict:
     """Make char translate table"""
     return {
       ord(k):v
@@ -134,6 +139,14 @@ class Hagaki:
         data[key] = self.repl[key](data[key])
       self.tpl.set(key, data[key])
     self.tpl.render()
+
+  def load_data(self):
+    with open(
+      self.args.csv or self.srcpath(self.conf['sample']),
+        encoding='utf8') as csvfile:
+        reader = DictReader(csvfile)
+        for row in reader:
+          self.add_card(row)
 
   def save(self):
     """Output for file"""
