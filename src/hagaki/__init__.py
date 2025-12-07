@@ -91,6 +91,8 @@ class Hagaki:
       choices=self.mono)
     parser.add_argument('--do', help='operation',
       choices=self.conf['choices']['do'])
+    parser.add_argument('--adjust', help='put background for adjustment',
+      action='store_true')
     parser.set_defaults(**self.conf['default'])
     return parser.parse_args()
 
@@ -103,6 +105,8 @@ class Hagaki:
     )
     pdf.set_margin(self.args.margin)
     pdf.set_auto_page_break(auto=True, margin=5)
+    if self.args.adjust:
+      pdf.set_page_background(str(self.srcpath(self.conf['background'])))
     pdf.add_font(self.args.font, '', self.font[self.args.font])
     if self.args.font != self.args.mono:
       pdf.add_font(self.args.mono, '', self.font[self.args.mono])
