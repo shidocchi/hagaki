@@ -17,6 +17,7 @@ font:
   ac: ackaisyo.ttf
 mono: [biz, ud]
 
+background: page_background.jpg
 sample: sample.csv
 
 choices:
