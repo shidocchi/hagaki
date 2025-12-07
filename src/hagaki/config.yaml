@@ -17,6 +17,8 @@ font:
   ac: ackaisyo.ttf
 mono: [biz, ud]
 
+sample: sample.csv
+
 choices:
   do: [print, open]
 
